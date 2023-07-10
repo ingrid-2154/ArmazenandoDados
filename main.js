@@ -58,10 +58,19 @@ function criaElemento(item) {
 
     novoItem.innerHTML += item.nome
 
+    novoItem.appendChild(botaoDeleta())
+  
     lista.appendChild(novoItem)
 }
 
 function atualizaElemento(item) {
   document.querySelector("[data-id='"+item.id+"']").innerHTML = item.quantidade
   
+}
+
+function botaoDeleta() {
+   const ElementoBotao = document.createElement("button")
+  ElementoBotao.innerHTML = "X"
+
+  return ElementoBotao
 }
